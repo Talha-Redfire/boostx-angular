@@ -9,29 +9,28 @@
       </p>
 
       <div class="AllFeaturesProjects">
-        <div class="FeaturedProjet">
+        <div class="FeaturedProjet" *ngFor="let project of projects">
           <div class="FPInfo">
-            <div class="FPInfos">
+            <button class="FPInfos">
               <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
+            </button>
+            <button class="FPInfos">
               <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
+            </button>
           </div>
 
           <div class="FpHeader">
             <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
+              <img src="{{ project.img }}" alt="InfoIcon" />
             </div>
             <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
+              <p class="ProjectDate">{{ project.date }}</p>
+              <h1 class="ProjectTitle">{{ project.name }}</h1>
+              <p class="ProjectCategory">{{ project.category }}</p>
             </div>
           </div>
           <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
+            {{ project.desc }}
           </p>
           <div class="FPChannels">
             <div class="FPChannelDet">
@@ -48,673 +47,46 @@
           </div>
 
           <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
-          </div>
-        </div>
-          <div class="FeaturedProjet">
-          <div class="FPInfo">
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/GlobIcon.svg" alt="GlobIcon" />
-            </div>
-            <div class="FPInfos">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-          </div>
-
-          <div class="FpHeader">
-            <div class="FpHeaderImg">
-              <img src="../../../assets/Svgs/InfoIcon.svg" alt="InfoIcon" />
-            </div>
-            <div class="FpHeaderDetails">
-              <p class="ProjectDate">Sale ended on April 08</p>
-              <h1 class="ProjectTitle">Automish Token</h1>
-              <p class="ProjectCategory">ATI</p>
-            </div>
-          </div>
-          <p class="ProjectDescription">
-            Dynamic pricing. Simulated DeFi orderbook. Every buy increases the
-            price.
-          </p>
-          <div class="FPChannels">
-            <div class="FPChannelDet">
-              <img
-                src="../../../assets/Svgs/BNBChainIcon.svg"
-                alt="BNBChainIcon"
-              />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-            <div class="FPChannelDet">
-              <img src="../../../assets/Svgs/TeleGramIcon.svg" alt="Project" />
-              <p class="FPChannelName">Distribution and launch on BNB chain</p>
-            </div>
-          </div>
-
-          <div class="ProjectButtons">
-            <!-- <button class="FPoutlinedBtn">Buy on Seasaw Swap</button> -->
-            <button class="FPFilledBtn">Buy on Seasaw Swap</button>
-            <div class="preLaunch">
-              <p class="preLaunchTitle">Presale launch</p>
-              <p class="preLaunchDets">11 ATI = $0.006667</p>
-            </div>
+            <div
+              *ngIf="project.swap === true; then thenBlock; else elseBlock"
+            ></div>
+            <ng-template #thenBlock>
+              <button class="FPoutlinedBtn">
+                Buy on Seasaw Swap
+              </button></ng-template
+            >
+            <ng-template #elseBlock>
+              <button class="FPFilledBtn">
+                Buy on Seasaw Swap
+              </button></ng-template
+            >
+            <div
+              *ngIf="
+                project.preSale === true;
+                then PreLaunchBlock;
+                else SwapBlock
+              "
+            ></div>
+            <ng-template #PreLaunchBlock>
+              <div class="preLaunch">
+                <p class="preLaunchTitle">Presale launch</p>
+                <p class="preLaunchDets">
+                  {{ project.currency }} = {{ project.dollars }}
+                </p>
+              </div></ng-template
+            >
+            <ng-template #SwapBlock>
+              <button class="FPFilledBtn">
+                Buy on Panecake Swap
+              </button></ng-template
+            >
           </div>
         </div>
       </div>
+
+      <button class="LaodMoreProject" (click)="LoadMoreProjects()">
+        See All
+      </button>
     </div>
   </div>
 </div>

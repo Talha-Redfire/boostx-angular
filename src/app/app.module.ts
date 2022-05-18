@@ -11,6 +11,7 @@ import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { KeyFeaturesComponent } from './Components/key-features/key-features.component';
 import { FeaturedProjectsComponent } from './Components/featured-projects/featured-projects.component';
+import { InfoSectionComponent } from './Components/info-section/info-section.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { FeaturedProjectsComponent } from './Components/featured-projects/featur
     HomePageComponent,
     KeyFeaturesComponent,
     FeaturedProjectsComponent,
+    InfoSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],

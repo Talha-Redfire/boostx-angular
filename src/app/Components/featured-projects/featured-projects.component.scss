@@ -37,7 +37,6 @@
     align-items: center;
     width: 91%;
     margin: 50px 0px;
-    border: 1px solid;
     .FeaturedProjet {
       display: flex;
       flex-direction: column;
@@ -60,6 +59,7 @@
           filter: drop-shadow(0px 17.0625px 19.5px rgba(76, 147, 143, 0.1));
           border-radius: 8.53125px;
           margin-left: 10px;
+          background: transparent;
         }
       }
       .FpHeader {
@@ -185,8 +185,8 @@
 
     color: #ffffff;
     &:hover {
-      color: #00aea5;
-      border: 2px solid #00aea5;
+      color: #40c8ff;
+      border: 2px solid #40c8ff;
       background: transparent;
     }
   }
@@ -210,5 +210,26 @@
       letter-spacing: -0.02em;
       color: #00aea5;
     }
+  }
+}
+.LaodMoreProject {
+  width: 221px;
+  height: 60px;
+  background: #40c8ff;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 188% */
+
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+  transition: 0.3s ease-in-out all;
+  &:hover {
+    border: 2px solid #40c8ff;
+    background: transparent;
+    color: #00aea5;
   }
 }
