@@ -1,0 +1,79 @@
+.keyFeatures {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .Title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 60px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+    letter-spacing: -0.03em;
+
+    color: #000000;
+  }
+  .KFsubTitle {
+    width: 850px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #64607d;
+  }
+  .AllFeatures {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 40px 0px;
+    .F-Features {
+      width: 275px;
+      height: 242px;
+      margin: 10px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.04);
+      border-radius: 20px;
+
+      & > p {
+        // width: 80px;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: -0.03em;
+        word-break: break-all;
+        color: #16012c;
+      }
+    }
+  }
+
+  .LaunchProjectBtn {
+    background: #40c8ff;
+    border-radius: 7px;
+    width: 222px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+    border: 1px solid transparent;
+  }
+}

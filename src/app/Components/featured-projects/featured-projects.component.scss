@@ -1,0 +1,214 @@
+.FeaturedProjects {
+  background: #e6f5f8;
+
+  padding: 50px 0px;
+}
+
+.FeaturedProjectMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .FeaturedProjectTitle {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 60px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+    letter-spacing: -0.03em;
+
+    color: #000000;
+  }
+
+  .FeaturedProjectsSubtitle {
+    width: 850px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #64607d;
+  }
+  .AllFeaturesProjects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 91%;
+    margin: 50px 0px;
+    border: 1px solid;
+    .FeaturedProjet {
+      display: flex;
+      flex-direction: column;
+      width: 580px;
+      height: auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 35px;
+      margin-bottom: 20px;
+      .FPInfo {
+        align-self: flex-end;
+        display: flex;
+        .FPInfos {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          filter: drop-shadow(0px 17.0625px 19.5px rgba(76, 147, 143, 0.1));
+          border-radius: 8.53125px;
+          margin-left: 10px;
+        }
+      }
+      .FpHeader {
+        display: flex;
+        align-items: center;
+        .FpHeaderImg {
+          width: 120px;
+          height: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #e6f5f8;
+          border-radius: 60px;
+          margin-right: 20px;
+        }
+        .FpHeaderDetails {
+          .ProjectDate {
+            font-family: "Gilroy-Regular";
+            font-size: 14px;
+            line-height: 16px;
+            /* identical to box height */
+
+            letter-spacing: -0.02em;
+
+            color: #01a6db;
+          }
+          .ProjectTitle {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: -0.03em;
+
+            color: #000000;
+          }
+          .ProjectCategory {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+
+            color: #000000;
+
+            // opacity: 0;
+          }
+        }
+      }
+      .ProjectDescription {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 15px 0px;
+        letter-spacing: -0.02em;
+        color: #64607d;
+      }
+    }
+  }
+}
+
+.FPChannels {
+  margin: 10px 0px;
+
+  .FPChannelDet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    & > img {
+      width: 21px;
+      height: 21px;
+
+      margin-right: 12px;
+    }
+    .FPChannelName {
+      font-size: 16px;
+      line-height: 19px;
+      /* identical to box height */
+
+      letter-spacing: -0.02em;
+
+      color: #64607d;
+    }
+  }
+}
+.ProjectButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .FPoutlinedBtn {
+    border: 2px solid #00aea5;
+    border-radius: 7px;
+    width: 217px;
+    background: transparent;
+    height: 60px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    /* identical to box height, or 214% */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #00aea5;
+    transition: all 0.5s ease;
+    &:hover {
+      background: #00aea5;
+      color: white;
+    }
+  }
+  .FPFilledBtn {
+    border: 1px solid transparent;
+    width: 217px;
+    height: 60px;
+    background: #40c8ff;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    /* identical to box height, or 214% */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+    transition: all 0.5s ease;
+
+    color: #ffffff;
+    &:hover {
+      color: #00aea5;
+      border: 2px solid #00aea5;
+      background: transparent;
+    }
+  }
+
+  .preLaunch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .preLaunchTitle {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: right;
+      letter-spacing: -0.02em;
+      color: #64607d;
+      margin-bottom: 6px;
+    }
+    .preLaunchDets {
+      font-size: 19px;
+      line-height: 22px;
+      text-align: right;
+      letter-spacing: -0.02em;
+      color: #00aea5;
+    }
+  }
+}

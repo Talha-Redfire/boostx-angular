@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 174, 165, 0.35) 0%,
+      rgba(0, 174, 165, 0) 162.22%
+    )
+    no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

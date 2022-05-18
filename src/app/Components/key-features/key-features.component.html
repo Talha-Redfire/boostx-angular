@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="keyFeatures">
+    <p class="Title">BoostX Key Features</p>
+    <p class="KFsubTitle">
+      Innovative Launchpad Technology created for IDOs with unique features
+      designed to boost your project into the stratosphere; live orderbooks,
+      dynamic pricing and much more…
+    </p>
+
+    <div class="AllFeatures">
+      <div class="F-Features d-flex" *ngFor="let feature of AllFeatures">
+        <img src="{{ feature.icon }}" alt="CuratedTokens" />
+        <p>{{ feature.title1 }}</p>
+        <p>{{ feature.title2 }}</p>
+      </div>
+    </div>
+
+    <button class="LaunchProjectBtn">Launch your Projects</button>
+  </div>
+</div>
