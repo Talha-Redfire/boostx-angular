@@ -1,0 +1,18 @@
+.AboutUsMain {
+  .aboutUsTop {
+    height: 400.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > p {
+      width: 53%;
+      text-align: center;
+    }
+  }
+  .aboutUsBottom {
+    height: 666.5px;
+    background: #00aea5;
+  }
+}
