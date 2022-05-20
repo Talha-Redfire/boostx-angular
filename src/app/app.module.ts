@@ -23,6 +23,8 @@ import { AppState } from 'Store/rootReducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CartListComponent } from './Components/cart-list/cart-list.component';
+import { ProductsNewComponent } from './Components/products-new/products-new.component';
+import { RootEffect } from 'Store/Effects/RootEffects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,7 @@ import { CartListComponent } from './Components/cart-list/cart-list.component';
     ProducctCardComponent,
     AllproductsComponent,
     CartListComponent,
+    ProductsNewComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import { CartListComponent } from './Components/cart-list/cart-list.component';
     HttpClientModule,
     StoreModule.forRoot(AppState),
     StoreDevtoolsModule.instrument({ logOnly: environment.production }),
-    EffectsModule.forRoot([ProductEffect]),
+    EffectsModule.forRoot(RootEffect),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],

@@ -1,4 +1,4 @@
-<ng-container
+<!-- <ng-container
   *ngIf="
     (products$ | async)?.loading == true;
     then LoadingBlock;
@@ -30,6 +30,60 @@
       <div class="product-card">
         <div class="product-tumb">
           <img src="{{ prod.image }}" alt="{{ prod.title }}" />
+        </div>
+        <div class="product-details">
+          <span class="product-catagory">{{ prod.category }}</span>
+          <h4>
+            <a href="">{{ prod.title }}</a>
+          </h4>
+          <p>
+            {{ prod.description }}
+          </p>
+          <div class="product-bottom-details">
+            <div class="product-price">${{ prod.price }}</div>
+            <div class="product-links">
+              <button (click)="addToCart(prod)" type="button">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template> -->
+<ng-container
+  *ngIf="
+    (Fethedproducts$ | async)?.loading == true;
+    then LoadingBlock;
+    else ProductsBlock
+  "
+>
+</ng-container>
+
+<ng-template #LoadingBlock>
+  <div class="NoProductFound">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #ProductsBlock>
+  <div class="row">
+    <div
+      class="col-md-3 px-2"
+      *ngFor="let prod of (Fethedproducts$ | async)?.productsFetched"
+    >
+      <div class="product-card">
+        <div class="product-tumb">
+          <img src="{{ prod.thumbnail }}" alt="{{ prod.title }}" />
         </div>
         <div class="product-details">
           <span class="product-catagory">{{ prod.category }}</span>
