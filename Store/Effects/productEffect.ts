@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, EmptyError, exhaustMap, map } from 'rxjs';
 import { ProductsApiService } from 'src/app/services/product.service';
-import { getProductsAction, productsSuccess } from '../product.actions';
+import { getProductsAction, productsSuccess } from '../Products/product.actions';
 
 @Injectable()
 export class ProductEffect {

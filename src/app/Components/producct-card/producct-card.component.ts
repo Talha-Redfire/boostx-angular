@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getproducts } from 'Store/products.selector';
-import { ProductsInterface } from '../../../../Store/products.reducer';
+import { AddtoCartAction } from 'Store/Cart/cartActions';
+import { ProductsInterface } from 'Store/Products/products.reducer';
 
 @Component({
   selector: 'app-producct-card',
@@ -12,14 +12,10 @@ import { ProductsInterface } from '../../../../Store/products.reducer';
 export class ProducctCardComponent implements OnInit {
   products$!: Observable<ProductsInterface>;
   constructor(private store: Store<{ productsList: ProductsInterface }>) {}
-
+  addToCart(Item: any) {
+    this.store.dispatch(AddtoCartAction({ product: Item }));
+  }
   ngOnInit(): void {
-    // this.products$ = this.store.select('productsList');
-    // this.products$ = this.store.select(getproducts);
     this.products$ = this.store.select('productsList');
-    // console.log('sdfsdfsdf', this.store.select(getproducts));
-    // this.store.select('productsList').subscribe((data) => {
-    //   console.log('Data', data);
-    // });
   }
 }

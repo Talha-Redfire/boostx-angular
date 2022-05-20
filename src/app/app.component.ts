@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getProductsAction } from 'Store/product.actions';
+import { getProductsAction } from 'Store/Products/product.actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,0 +1,87 @@
+<div class="container">
+  <ng-container
+    *ngIf="
+      (CartItems$ | async)?.cartList?.length === 0;
+      then EmptyBlock;
+      else CartItemsBlock
+    "
+  >
+  </ng-container>
+  <ng-template #CartItemsBlock>
+    <h1>Shopping Cart</h1>
+
+    <div class="shopping-cart">
+      <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Quantity</label>
+        <label class="product-removal">Remove</label>
+        <label class="product-line-price">Total</label>
+      </div>
+
+      <div class="product" *ngFor="let prod of (CartItems$ | async)?.cartList">
+        <div class="product-image">
+          <img src="{{ prod.image }}" alt="{{ prod.title }}" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">{{ prod.title }}</div>
+          <p class="product-description">
+            The best dog bones of all time. Holy crap. Your dog will be begging
+            for these things! I got curious once and ate one myself. I'm a fan.
+          </p>
+        </div>
+        <div class="product-price">{{ prod.price }}</div>
+        <div class="product-quantity">
+          <button (click)="decreaseQty(prod.id, prod.price, prod.qty)">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <p class="ProQty">{{ prod.qty }}</p>
+          <button (click)="increaseQty(prod.id, prod.price)">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="product-removal">
+          <button class="remove-product" (click)="removeCart(prod.id)">
+            Remove
+          </button>
+        </div>
+        <div class="product-line-price">{{ prod.total | number: "1.0-0" }}</div>
+      </div>
+
+      <div class="totals">
+        <!-- <div class="totals-item">
+        <label>Subtotal</label>
+        <div class="totals-value" id="cart-subtotal">
+          {{ CartTotal | number: "1.0-0" }}
+        </div>
+      </div>
+      <div class="totals-item">
+        <label>Tax 5%</label>
+        <div class="totals-value" id="cart-tax">3.60</div>
+      </div>
+      <div class="totals-item">
+        <label>Shipping</label>
+        <div class="totals-value" id="cart-shipping">15.00</div>
+      </div> -->
+        <div class="totals-item totals-item-total">
+          <label>Grand Total</label>
+          <div class="totals-value" id="cart-total">
+            {{ CartTotal | number: "1.0-0" }}
+          </div>
+        </div>
+      </div>
+
+      <button class="checkout">Checkout</button>
+    </div>
+  </ng-template>
+
+  <ng-template #EmptyBlock>
+    <div class="EmptyCartScreen">
+      <img src="../../../assets/EmptyIcon.png" alt="EmptyIcon" />
+      <h1>No Items In Cart</h1>
+
+      <a [routerLink]="['/products']">Countinue Shopping ></a>
+    </div>
+  </ng-template>
+</div>

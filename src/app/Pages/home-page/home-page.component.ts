@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ProductsApiService } from 'src/app/services/product.service';
-import { getProductsAction } from 'Store/product.actions';
+import { getProductsAction } from 'Store/Products/product.actions';
 
 @Component({
   selector: 'app-home-page',

@@ -13,13 +13,16 @@ import { InfoSectionComponent } from './Components/info-section/info-section.com
 import { AboutComponent } from './Pages/about/about.component';
 import { StoreModule } from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
-import { getproductsReducer } from 'Store/products.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ProductEffect } from 'Store/Effects/productEffect';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from 'src/environments/environment';
 import { ProducctCardComponent } from './Components/producct-card/producct-card.component';
 import { AllproductsComponent } from './Pages/allproducts/allproducts.component';
+import { AppState } from 'Store/rootReducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { CartListComponent } from './Components/cart-list/cart-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,15 +36,18 @@ import { AllproductsComponent } from './Pages/allproducts/allproducts.component'
     AboutComponent,
     ProducctCardComponent,
     AllproductsComponent,
+    CartListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    StoreModule.forRoot({ productsList: getproductsReducer }, {}),
+    StoreModule.forRoot(AppState),
     StoreDevtoolsModule.instrument({ logOnly: environment.production }),
     EffectsModule.forRoot([ProductEffect]),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

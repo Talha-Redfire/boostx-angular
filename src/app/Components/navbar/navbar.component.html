@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="Header">
-    <div class="Logo">
+  <div class="Header my-3">
+    <a class="Logo" [routerLink]="['/']">
       <img src="../../assets/BoostXLogo.png" alt="Logo" />
-    </div>
+    </a>
     <div class="Menus">
       <ul>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -21,14 +21,22 @@
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
-        <li><a [routerLink]="['/products']">FAQs</a></li>
+        </li> -->
+        <li><a [routerLink]="['/products']">Products</a></li>
         <li><a href="http://google.com">About</a></li>
       </ul>
     </div>
     <div class="buttons">
       <button class="signInBtn">Sign In</button>
-      <button class="startFree">Start Free</button>
+      <a [routerLink]="['/cart']"  class="startFree position-relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        >
+          {{ (CartItems$ | async)?.cartList?.length }}
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </a>
     </div>
   </div>
 </div>
