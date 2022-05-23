@@ -8,6 +8,7 @@ import {
   RemovefromCartAction,
 } from 'Store/Cart/cartActions';
 import { CartItemsInterface } from 'Store/Cart/cartReducers';
+import { FetchedProductsInterface } from 'Store/FetchProducts/FetchproductReducer';
 
 @Component({
   selector: 'app-cart-list',
@@ -17,11 +18,14 @@ import { CartItemsInterface } from 'Store/Cart/cartReducers';
 export class CartListComponent implements OnInit {
   CartItems$!: Observable<CartItemsInterface>;
   CartTotal: any;
+  cartList$!: Observable<any>;
   constructor(
     private store: Store<{ Cart: CartItemsInterface }>,
+    private store2: Store<{ fetchedProducts: FetchedProductsInterface }>,
     private totalService: GetCartTotalService
   ) {
     this.CartItems$ = this.store.select('Cart');
+    this.cartList$ = this.store2.select('fetchedProducts');
   }
   removeCart(Item: Number) {
     this.store.dispatch(RemovefromCartAction({ id: Item }));

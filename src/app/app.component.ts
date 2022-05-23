@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { fetchProductsAction } from 'Store/FetchProducts/FetchproductAactions';
+import {
+  fetchProductsAction,
+  getCartListRequest,
+} from 'Store/FetchProducts/FetchproductAactions';
 import { getProductsAction } from 'Store/Products/product.actions';
 @Component({
   selector: 'app-root',
@@ -12,8 +15,9 @@ export class AppComponent {
 
   constructor(private store: Store) {}
   getAllproducts() {
-    this.store.dispatch(getProductsAction());
+    // this.store.dispatch(getProductsAction());
     this.store.dispatch(fetchProductsAction());
+    this.store.dispatch(getCartListRequest());
   }
   ngOnInit(): void {
     this.getAllproducts();

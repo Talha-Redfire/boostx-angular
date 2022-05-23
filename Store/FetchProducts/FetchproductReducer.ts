@@ -1,12 +1,21 @@
 import { createReducer, on } from '@ngrx/store';
-import { fetchProductsAction, ProductsFetched } from './FetchproductAactions';
+import {
+  AddTocartrquestAction,
+  addToCartSuccessAction,
+  fetchProductsAction,
+  getCartListRequest,
+  getCartListSuccess,
+  ProductsFetched,
+} from './FetchproductAactions';
 export interface FetchedProductsInterface {
   productsFetched: any[];
   loading: boolean;
+  getCartList: any[];
 }
 const initialState: FetchedProductsInterface = {
   productsFetched: [],
   loading: false,
+  getCartList: [],
 };
 export const fetchProductsReducer = createReducer(
   initialState,
@@ -22,6 +31,37 @@ export const fetchProductsReducer = createReducer(
     return {
       ...state,
       productsFetched: [...action.list],
+      loading: false,
+    };
+  }),
+
+  on(AddTocartrquestAction, (state, action) => {
+    return {
+      ...state,
+      loading: true,
+    };
+  }),
+
+  on(addToCartSuccessAction, (state, action) => {
+    console.log(action);
+    return {
+      ...state,
+      loading: false,
+      getCartList: [...state.getCartList, action.list],
+    };
+  }),
+  on(getCartListRequest, (state, action) => {
+    console.log(action);
+    return {
+      ...state,
+      getCartList: [],
+      loading: true,
+    };
+  }),
+  on(getCartListSuccess, (state, action) => {
+    return {
+      ...state,
+      getCartList: [...action.list],
       loading: false,
     };
   })
